@@ -1,0 +1,28 @@
+-----OBJETIVO
+Como capturar y utilizar parametros en las rutas de una aplicacion Express
+
+Los parametros de una ruta son una forma comun de recibir informacion del cliente a traves de la URL
+
+-----¿Que son los parametros?
+Son segmentos de la URL definidos con un prefijo :parameters
+
+
+-----Ejemplo básico
+1) RUTA DEFINIDA EN EL SERVIDOR
+app.get("user/:id", (req, res) => 
+{
+
+    res.send('User ID: ${req.params.id}')
+})
+
+2) SOLICITUD DEL CLIENTE 
+
+GET /user/1234
+
+3) RESULTADO EN EL SERVIDOR
+
+req.params = {id: '1234'}
+
+4) RESPUESTA ENVIADA
+
+USER ID: 1234

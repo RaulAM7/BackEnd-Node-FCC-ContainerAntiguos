@@ -1,0 +1,44 @@
+Explicación del desafío
+En el desafío, te piden crear una ruta en el servidor Express que:
+
+Responda a solicitudes GET.
+Use el método app.get() para definir la ruta.
+Sirva el texto "Hello Express" en la ruta raíz (/).
+Solución paso a paso:
+Importar Express y crear la aplicación:
+
+javascript
+Copiar código
+const express = require("express");
+const app = express();
+Crear la ruta raíz (/) que responda con "Hello Express":
+
+javascript
+Copiar código
+app.get("/", (req, res) => {
+  res.send("Hello Express");
+});
+Configurar el puerto y escuchar solicitudes (ya está en el archivo server.js según la descripción):
+
+javascript
+Copiar código
+app.listen(3000, () => {
+  console.log("Servidor ejecutándose en el puerto 3000");
+});
+Tu archivo myApp.js debería verse algo así:
+
+javascript
+Copiar código
+const express = require("express");
+const app = express();
+
+// Ruta para responder a solicitudes GET en "/"
+app.get("/", (req, res) => {
+  res.send("Hello Express");
+});
+
+module.exports = app;
+Con este código:
+
+El servidor escuchará solicitudes en el puerto especificado.
+Cuando un cliente haga un GET /, recibirá como respuesta "Hello Express".

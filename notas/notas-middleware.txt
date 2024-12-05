@@ -1,0 +1,12 @@
+¿Que es un middleware?
+
+Una funcion de Express 
+
+
+Estructura de un middleware
+
+function(req, res, next)
+{
+    console.log('Im a middleware')
+    next();
+}

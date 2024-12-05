@@ -1,0 +1,47 @@
+-------Concepto general de QUERY PARAMS
+
+Mecanismo para recibir datos de entrada del cliente por medio de la URL
+
+
+Son un metodo usual para enviar informacion adicional en la solicitud HTTP que mandamos mediante la URL 
+que le mandamos al servidor de la Aplicacion en cuestion para que con eso funcione mejor
+
+
+-------¿Qué son?
+
+Definicion:
+Son pares clave-valor que se envian en la URL justo detrás del simbolo ?
+
+Cada par está separado por una &
+
+Se usan normalmente para enviar datos pequeños como filtros o identificadores o configuraciones
+
+
+Ejemplo de URL con Query Params
+
+/library?userId=546&bookId=6754
+
+Aqui tenemos los query params de:
+    - userId = 546 
+    - bookId = 6754
+
+Y todo esto es 
+    la cadena de consulta ?userId=546&bookId=6754
+    dentro de la ruta /library
+
+
+-------¿Como se acceden en Express?
+
+Se recopilan en el objeto req
+En el atributo query
+
+- Acedemos mediante req.query
+    - req.query = { userId: '546', bookId: '6754' }
+
+
+
+-------¿Para que se usan?
+
+
+1) Para procesar datos del cliente
+2) Para crear APIs dinamicas que respondan a estos datos enviados por el cliente para mejorar su funcionamiento 
